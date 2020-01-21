@@ -19,5 +19,13 @@ pipeline {
         bat 'mvn test -Dreversion=1.0 -Dverbose=true'
       }
     }
+    stage('Application Code Coverage') {
+          step([$class: 'JacocoPublisher', 
+          execPattern: 'target/*.exec',
+          classPattern: 'target/classes',
+          sourcePattern: 'src/main/java',
+          exclusionPattern: 'src/test*'
+      ])
+    }
   }
 }
