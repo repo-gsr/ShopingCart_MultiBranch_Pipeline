@@ -1,6 +1,8 @@
 package com.ShopingCart;
 
 import java.util.List;
+
+import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.format.FormatterRegistry;
@@ -23,8 +25,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class ShopingCartApplication implements WebMvcConfigurer {
+	private static Logger logger = Logger.getLogger(ShopingCartApplication.class);
 
 	public static void main(String[] args) {
+		logger.info("ShopingCart Application Started");
 		SpringApplication.run(ShopingCartApplication.class, args);
 	}
 
