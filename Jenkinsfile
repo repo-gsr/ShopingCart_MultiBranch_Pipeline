@@ -20,13 +20,8 @@ pipeline {
       }
     }
     stage('Application Code Coverage') {
-      steps {
-          step([$class: 'JacocoPublisher', 
-          execPattern: 'target/*.exec',
-          classPattern: 'target/classes',
-          sourcePattern: 'src/main/java',
-          exclusionPattern: 'src/test*'
-        ])
+      steps {     
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: './target\\site\\jacoco\\jacoco.xml', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
       }
     }
   }
