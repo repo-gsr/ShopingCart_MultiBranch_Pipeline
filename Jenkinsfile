@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Application Code Coverage') {
       steps {     
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: '.\target\\site\\jacoco\\jacoco.xml', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: '.\target\site\jacoco\jacoco.xml', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
       }
     }
   }
