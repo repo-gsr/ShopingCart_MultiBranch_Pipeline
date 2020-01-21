@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters {
-        string(defaultValue: 1.0, description: 'releaseversion', name: 'ReleaseVersion')
+        string(defaultValue: '1.0', description: 'releaseversion', name: 'ReleaseVersion')
     }
   stages {
     stage('Application Checkout From Git') {
