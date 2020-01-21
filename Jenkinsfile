@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Application Build') {
       steps {
-        bat 'mvn clean install -Dversion=1.0 -Dverbose=true -Dmaven.test.skip=true'
+        bat 'mvn clean install -Dreversion=1.0 -Dverbose=true -Dmaven.test.skip=true'
       }
     }
     stage('Application Junit Test') {
       steps {
-        bat 'mvn test -Dversion=1.0 -Dverbose=true'
+        bat 'mvn test -Dreversion=1.0 -Dverbose=true'
       }
     }
   }
