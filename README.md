@@ -1,2 +1,4 @@
 # ShopingCart_MultiBranch_Pipeline
 ShopingCart_MultiBranch_Pipeline  Test
+ShopingCart_MultiBranch_Pipeline  Test
+ShopingCart_MultiBranch_Pipeline  Test
