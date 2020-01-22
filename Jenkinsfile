@@ -31,7 +31,7 @@ pipeline {
     }
     stage('Push Docker Image To Docker Repo') {
       steps {     
-       
+       echo 'sample step'
       }
     }
   }
