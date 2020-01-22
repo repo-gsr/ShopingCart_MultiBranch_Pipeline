@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Application Code Coverage') {
       steps {     
-        jacoco execPattern: '**/target/**.exec', inclusionPattern: '**/*.class'
+        jacoco buildOverBuild: true, changeBuildStatus: true, execPattern: '**/target/**.exec', inclusionPattern: '**/*.class'
       }
     }
   }
