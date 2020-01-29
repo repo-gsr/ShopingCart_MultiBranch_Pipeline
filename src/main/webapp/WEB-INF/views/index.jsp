@@ -25,8 +25,9 @@
 	</div> -->
 	<hr class="hline">
 	<div class="topnav">
-		<a class="active" href="/">Home</a> <a href="/getProducts">Products</a> <a
-			href="/getOrderedProducts">Order</a> <a href="/getCartProducts">Cart</a>
+		<a class="active" href="/index">Home</a> <a href="/getProducts">Products</a>
+		<a href="/getOrderedProducts">Order</a> <a href="/getCartProducts">Cart</a>
+		<a href="/SignOut">Logout</a>
 	</div>
 	<div class="container text-center">
 		<div class="col-md-12 col-sm-12">

@@ -32,9 +32,16 @@ public class ShopingCartApplication implements WebMvcConfigurer {
 		SpringApplication.run(ShopingCartApplication.class, args);
 	}
 
-	@Override
+	/*@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("index");
+
+	}*/
+	
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/").setViewName("login");
+		registry.addViewController("/index").setViewName("index");
 
 	}
 

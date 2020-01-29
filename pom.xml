@@ -47,6 +47,16 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -78,39 +88,17 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin>
-				https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin
-				<groupId>com.spotify</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.4.11</version>
-				<executions>
-					<execution>
-						<id>default</id>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<imageName>${docker.image.prefix}</imageName>
-					<dockerDirectory>docker</dockerDirectory>
-					<baseImage>maven:3.5.4-jdk-8</baseImage>
-					<repository>${project.artifactId}</repository> 
-					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-					<resources>
-						<resource>
-							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.jar</include>
-						</resource>
-					</resources>
-					<imageTags>
-						<imageTag>${project.version}</imageTag>
-					</imageTags>
-					<forceTags>true</forceTags>
-				</configuration>
-			</plugin> -->
-			
+			<!-- <plugin> https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin 
+				<groupId>com.spotify</groupId> <artifactId>docker-maven-plugin</artifactId> 
+				<version>0.4.11</version> <executions> <execution> <id>default</id> <goals> 
+				<goal>build</goal> </goals> </execution> </executions> <configuration> <imageName>${docker.image.prefix}</imageName> 
+				<dockerDirectory>docker</dockerDirectory> <baseImage>maven:3.5.4-jdk-8</baseImage> 
+				<repository>${project.artifactId}</repository> <entryPoint>["java", "-jar", 
+				"/${project.build.finalName}.jar"]</entryPoint> <resources> <resource> <targetPath>/</targetPath> 
+				<directory>${project.build.directory}</directory> <include>${project.build.finalName}.jar</include> 
+				</resource> </resources> <imageTags> <imageTag>${project.version}</imageTag> 
+				</imageTags> <forceTags>true</forceTags> </configuration> </plugin> -->
+
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
